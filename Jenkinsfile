@@ -1,9 +1,7 @@
 node {
   try {
     stage('Clone') {
-        steps {
-          git url: 'https://github.com/ekhv/demo.git'
-        }
+      git url: 'https://github.com/ekhv/demo.git'
     }
     stage('Build Docker test'){
      sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
