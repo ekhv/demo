@@ -8,6 +8,10 @@ node {
         sh 'docker build -t node-app --no-cache .'
         sh 'docker tag node-app localhost:5000/node-app'
     }
+    
+    stage('Test'){
+        sh 'docker run --name node-app echo echo "curl -s http://localhost:49160/"'
+    }
   }
   catch (err) {
     throw err
