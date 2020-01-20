@@ -1,4 +1,4 @@
-node ('swarm'){
+node {
   try {
     stage('Clone') {
       git url: 'https://github.com/ekhv/demo.git'
