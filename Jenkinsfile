@@ -10,7 +10,7 @@ node {
     }
     
     stage('Test'){
-        sh 'docker run --name node-app echo echo "curl -s http://localhost:49160/"'
+        sh 'docker run --name node-app echo "curl -s http://localhost:49160/"'
     }
   }
   catch (err) {
